@@ -10,7 +10,7 @@ cssclasses: clean-layout
 <진일 추천 장소>
 
 #### 모리향
-- 중식당1
+- 중식당12
 - 길동사거리 부근 (강동역 ↔ 길동역 중간)
 - [https://naver.me/Fy2mzzQB ](https://naver.me/Fy2mzzQB)
 
