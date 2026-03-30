@@ -51,14 +51,11 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      //Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-	  Plugin.CrawlLinks({ markdownLinkResolution: "relative", // 아까 선택하신 'relative'에 맞게 수정
-      prettyLinks: false 
-      }),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Description(),
     ],
-    filters: [Plugin.ExplicitPublish()],
+    filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
