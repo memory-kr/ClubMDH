@@ -1,35 +1,28 @@
-/* custom.scss 맨 윗줄 */
-* { background-color: red !important; }
-
-/* 1. 모든 페이지에서 공통적으로 넓게 보이게 설정 */
+/* 1. 기본 폭 설정 */
 :root {
-  --page-width: 1200px;
+  --page-width: 1400px !important;
 }
 
-/* 2. clean-layout 클래스가 들어간 페이지 강제 숨김 */
+/* 2. index 페이지(메인)에서 모든 UI 요소 강제 삭제 */
+/* 클래스(.clean-layout)가 안 먹히더라도 슬러그 값으로 강제 타겟팅합니다. */
 body[data-slug="index"] .left,
-body.clean-layout .left,
-body.clean-layout aside.left { 
-  display: none !important; 
+body[data-slug="index"] aside.left,
+body[data-slug="index"] .right,
+body[data-slug="index"] aside.right,
+body[data-slug="index"] footer,
+body[data-slug="index"] .content-meta,
+body[data-slug="index"] .backlinks,
+body[data-slug="index"] .graph {
+  display: none !important;
   visibility: hidden !important;
   width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-body.clean-layout .right,
-body.clean-layout aside.right { 
-  display: none !important; 
-}
-
-body.clean-layout footer { 
-  display: none !important; 
-}
-
-body.clean-layout .content-meta { 
-  display: none !important; 
-}
-
-/* 3. 본문 영역을 중앙으로 확장 */
-body.clean-layout .center {
+/* 3. 본문 영역을 화면 중앙으로 확장 */
+body[data-slug="index"] .center {
   width: 100% !important;
   max-width: var(--page-width) !important;
   margin: 0 auto !important;
