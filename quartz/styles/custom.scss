@@ -1,3 +1,6 @@
+/* custom.scss 맨 윗줄 */
+* { background-color: red !important; }
+
 /* 1. 모든 페이지에서 공통적으로 넓게 보이게 설정 */
 :root {
   --page-width: 1200px;

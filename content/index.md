@@ -5,8 +5,10 @@ modified: 2026-03-31 (화) 오전 12:37:58
 modified.ob: 2026-03-30 (월) 오후 11:58:09
 source: desktop.win
 content-hash: -1373647645
-cssclasses: clean-layout
+cssclasses:
+  - clean-layout
 ---
+
 <진일 추천 장소>
 
 #### 모리향
