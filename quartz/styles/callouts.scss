@@ -1,110 +1,20 @@
-@use "sass:color";
+/* clean-layout 클래스가 붙은 페이지에서만 작동 */
+body.clean-layout {
+  /* 왼쪽 사이드바 (제목, 검색창 등) 숨기기 */
+  .left { display: none !important; }
 
-.callout {
-  border: 1px solid var(--border);
-  background-color: var(--bg);
-  border-radius: 5px;
-  padding: 0 1rem;
-  overflow-y: hidden;
-  transition: max-height 0.3s ease;
-  box-sizing: border-box;
+  /* 오른쪽 사이드바 (그래프, 백링크 등) 숨기기 */
+  .right { display: none !important; }
 
-  & > *:nth-child(2) {
-    margin-top: 0;
+  /* 푸터 (Created with Quartz, 링크 등) 숨기기 */
+  footer { display: none !important; }
+
+  /* 본문 메타 정보 (날짜, Reading time) 숨기기 */
+  .content-meta { display: none !important; }
+
+  /* 본문 폭을 중앙으로 넓히기 (사이드바가 사라졌으므로) */
+  .center {
+    width: 100% !important;
+    max-width: 1000px !important;
   }
-
-  &[data-callout="note"] {
-    --color: #448aff;
-    --border: #448aff44;
-    --bg: #448aff10;
-  }
-
-  &[data-callout="abstract"] {
-    --color: #00b0ff;
-    --border: #00b0ff44;
-    --bg: #00b0ff10;
-  }
-
-  &[data-callout="info"],
-  &[data-callout="todo"] {
-    --color: #00b8d4;
-    --border: #00b8d444;
-    --bg: #00b8d410;
-  }
-
-  &[data-callout="tip"] {
-    --color: #00bfa5;
-    --border: #00bfa544;
-    --bg: #00bfa510;
-  }
-
-  &[data-callout="success"] {
-    --color: #09ad7a;
-    --border: #09ad7144;
-    --bg: #09ad7110;
-  }
-
-  &[data-callout="question"] {
-    --color: #dba642;
-    --border: #dba64244;
-    --bg: #dba64210;
-  }
-
-  &[data-callout="warning"] {
-    --color: #db8942;
-    --border: #db894244;
-    --bg: #db894210;
-  }
-
-  &[data-callout="failure"],
-  &[data-callout="danger"],
-  &[data-callout="bug"] {
-    --color: #db4242;
-    --border: #db424244;
-    --bg: #db424210;
-  }
-
-  &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
-  }
-
-  &[data-callout="quote"] {
-    --color: var(--secondary);
-    --border: var(--lightgray);
-  }
-
-  &.is-collapsed > .callout-title > .fold {
-    transform: rotateZ(-90deg);
-  }
-}
-
-.callout-title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 1rem 0;
-  color: var(--color);
-
-  & .fold {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  & > .callout-title-inner > p {
-    color: var(--color);
-    margin: 0;
-  }
-}
-
-.callout-icon {
-  width: 18px;
-  height: 18px;
-}
-
-.callout-title-inner {
-  font-weight: 700;
 }
