@@ -1,1 +1,10 @@
-// put your custom CSS here!
+:root {
+  --page-width: 90%;    /* 화면의 90%를 사용 (유연함) */
+  --desktop-max-width: 1400px; /* 하지만 아무리 커도 1400px은 넘지 마라 */
+}
+
+.center, .page {
+  width: var(--page-width);
+  max-width: var(--desktop-max-width) !important;
+  margin: 0 auto; /* 중앙 정렬 유지 */
+}
